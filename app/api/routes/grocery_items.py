@@ -12,4 +12,4 @@ async def get_grocery_item(item_id: int) -> GroceryItem:
     else:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Item not found")
 
-@router.post("/")
+@router.post("/f")
