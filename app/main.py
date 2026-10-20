@@ -4,7 +4,7 @@ import httpx
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import auth, health, products, users
+from app.api.routes import auth, health, pantry, products, users
 from app.services.product_lookup import REQUEST_TIMEOUT_SECONDS
 
 
@@ -28,6 +28,7 @@ app.add_middleware(
 app.include_router(auth.router, prefix="/auth", tags=["auth"])
 app.include_router(users.router, prefix="/users", tags=["users"])
 app.include_router(products.router, prefix="/products", tags=["products"])
+app.include_router(pantry.router, prefix="/pantry", tags=["pantry"])
 app.include_router(health.router, tags=["health"])
 
 
