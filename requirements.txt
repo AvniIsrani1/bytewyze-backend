@@ -4,3 +4,8 @@ uvicorn
 httpx
 ruff
 pre-commit
+sqlmodel
+pymysql>=1.2.3
+cryptography
+pydantic-settings
+alembic
