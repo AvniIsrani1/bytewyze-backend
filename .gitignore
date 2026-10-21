@@ -1,1 +1,12 @@
 venv/
+.venv/
+
+# local secrets, never commit (the .env.example template is committed)
+.env
+.env.*
+!.env.example
+
+# python caches and build files
+__pycache__/
+*.py[cod]
+.ruff_cache/
